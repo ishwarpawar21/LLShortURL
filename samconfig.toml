@@ -1,0 +1,11 @@
+version = 0.1
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "lealishorturl"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-1cso7ojb9uv5p"
+s3_prefix = "lealishorturl"
+region = "eu-west-2"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+parameter_overrides = "AppName=\"lealishortner\" UseLocalClient=\"false\" GithubRepository=\"https://github.com/ishwarpawar21/LLShortURL.git\" CustomDomain=\"none\""
