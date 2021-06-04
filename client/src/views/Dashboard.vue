@@ -53,7 +53,8 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. -->
                 {{ link.url }}
               </div>
               <div class="is-size-7">
-                <time>{{ link.timestamp | formatDate }}</time>
+                <!--<time>{{ link.timestamp | formatDate }}</time> -->
+                <time>{{ link.timestamp }}</time>
               </div>
             </div>
           </div>
@@ -85,7 +86,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. -->
     <div class="modal" v-bind:class="{ 'is-active': modalIsActive }">
       <div class="modal-background"></div>
       <div class="modal-card">
-        <header class="modal-card-head">
+      <!--  <header class="modal-card-head">
           <p class="modal-card-title">
             <span v-if="modalTypeCreate">Create</span>
             <span v-else>Update</span> Sliplink
@@ -95,7 +96,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. -->
             v-on:click="toggleModal()"
             aria-label="close"
           ></button>
-        </header>
+        </header> -->
         <section class="modal-card-body">
           <div class="field">
             <div class="control">
