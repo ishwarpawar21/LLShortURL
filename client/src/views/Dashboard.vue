@@ -155,7 +155,7 @@ export default {
       apiUrl: process.env.VUE_APP_API_ROOT,
       modalIsActive: false,
       model: {
-        id: "",
+        //id: "",
         url: "",
       },
       currentLink: {},
@@ -178,7 +178,7 @@ export default {
       if (type === "edit") {
         this.currentLink = link;
         this.currentIndex = ind;
-        this.model.id = link.id;
+        //this.model.id = link.id;
         this.model.url = link.url;
       }
     },
