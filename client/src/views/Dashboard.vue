@@ -86,7 +86,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. -->
     <div class="modal" v-bind:class="{ 'is-active': modalIsActive }">
       <div class="modal-background"></div>
       <div class="modal-card">
-      <!--  <header class="modal-card-head">
+       <header class="modal-card-head">
           <p class="modal-card-title">
             <span v-if="modalTypeCreate">Create</span>
             <span v-else>Update</span> Sliplink
@@ -96,9 +96,9 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. -->
             v-on:click="toggleModal()"
             aria-label="close"
           ></button>
-        </header> -->
+        </header>
         <section class="modal-card-body">
-          <div class="field">
+        <!--   <div class="field">
             <div class="control">
               <input
                 class="input"
@@ -109,7 +109,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. -->
                 :disabled="!modalTypeCreate"
               />
             </div>
-          </div>
+          </div> -->
           <div class="field">
             <div class="control">
               <input
