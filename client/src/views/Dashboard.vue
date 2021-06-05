@@ -98,7 +98,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. -->
           ></button>
         </header>
         <section class="modal-card-body">
-        <!--   <div class="field">
+          <div class="field">
             <div class="control">
               <input
                 class="input"
@@ -109,7 +109,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. -->
                 :disabled="!modalTypeCreate"
               />
             </div>
-          </div> -->
+          </div>
           <div class="field">
             <div class="control">
               <input
@@ -178,7 +178,7 @@ export default {
       if (type === "edit") {
         this.currentLink = link;
         this.currentIndex = ind;
-        //this.model.id = link.id;
+        this.model.id = link.id;
         this.model.url = link.url;
       }
     },
