@@ -364,7 +364,6 @@ components:
           type: string
       required:
         - url
-        - owner
   parameters:
     authHeader:
       in: header
