@@ -156,6 +156,8 @@ paths:
         httpMethod: "POST"
         requestTemplates:
           application/json: { "Fn::Sub": "{\"TableName\": \"${LinkTable}\",\
+            \"ConditionExpression\":\"attribute_not_exists(id)\", \
+            \"Key\": {\"id\": {\"S\": $input.json('$.id')}}, \
             \"ExpressionAttributeNames\": {\"#u\": \"url\",\"#o\": \"owner\",\"#ts\": \"timestamp\"}, \
             \"ExpressionAttributeValues\":{\":u\": {\"S\": $input.json('$.url')},\":o\": {\"S\": \"$context.authorizer.claims.email\"},\":ts\": {\"S\": \"$context.requestTime\"}}, \
             \"UpdateExpression\": \"SET #u = :u, #o = :o, #ts = :ts\", \
@@ -347,10 +349,13 @@ components:
     PostBody:
       type: object
       properties:
+        id:
+          type: string
         url:
           type: string
           pattern: ^https?://[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)
       required:
+        - id
         - url
     PutBody:
       type: object
