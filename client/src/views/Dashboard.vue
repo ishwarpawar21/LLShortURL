@@ -53,7 +53,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. -->
                 {{ link.url }}
               </div>
               <div class="is-size-7">
-                <time>{{ link.timestamp }}</time>
+                <time>{{ link.timestamp | formatDate }}</time>
               </div>
             </div>
           </div>
