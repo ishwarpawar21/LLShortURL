@@ -53,7 +53,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. -->
                 {{ link.url }}
               </div>
               <div class="is-size-7">
-                <time>{{ link.timestamp | formatDate }}</time>
+                <time>{{ link.timestamp }}</time>
               </div>
             </div>
           </div>
@@ -97,7 +97,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. -->
           ></button>
         </header>
         <section class="modal-card-body">
-          <div class="field">
+          <!-- <div class="field">
             <div class="control">
               <input
                 class="input"
@@ -108,7 +108,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. -->
                 :disabled="!modalTypeCreate"
               />
             </div>
-          </div>
+          </div> -->
           <div class="field">
             <div class="control">
               <input
