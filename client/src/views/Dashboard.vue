@@ -155,6 +155,7 @@ export default {
       modalIsActive: false,
       model: {
         id: "default",
+        owner: "admin",
         url: "https://www.leali.io",
       },
       currentLink: {},
