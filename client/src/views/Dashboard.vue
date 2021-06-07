@@ -53,17 +53,17 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. -->
                 {{ link.url }}
               </div>
               <div class="is-size-7">
-                <time>{{ link.timestamp | formatDate }}</time>
+                <time>{{ link.timestamp}}</time>
               </div>
             </div>
           </div>
           <footer class="card-footer">
-            <a
+            <!-- <a
               v-on:click="toggleModal('edit', link, i)"
               href="#"
               class="card-footer-item"
               >Edit</a
-            >
+            > -->
             <a
               v-on:click="deleteLink(link.id, i)"
               href="#"
