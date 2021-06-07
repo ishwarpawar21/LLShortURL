@@ -154,10 +154,11 @@ export default {
       apiUrl: process.env.VUE_APP_API_ROOT,
       modalIsActive: false,
       model: {
-        id: "",
-        url: "",
-        owner: "default",
+        id: "admin",
+        url: "https://www.default.io",
+        owner: "ishwar@leali.io",
       },
+      
       currentLink: {},
       currentIndex: 0,
       modalTypeCreate: true,
