@@ -172,14 +172,14 @@ export default {
   },
   methods: {
     toggleModal: function (type, link = null, ind = 0) {
-      //this.model.id = this.model.url = ""; // hacky reset
+      this.model.id = this.model.url = ""; // hacky reset
       this.modalTypeCreate = type === "create";
       this.modalIsActive = !this.modalIsActive;
 
       if (type === "edit") {
         this.currentLink = link;
         this.currentIndex = ind;
-        //this.model.id = link.id;
+        this.model.id = "default";
         this.model.url = link.url;
       }
     },
