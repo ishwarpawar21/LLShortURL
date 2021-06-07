@@ -156,7 +156,7 @@ export default {
       model: {
         id: "",
         url: "",
-        owner: "",
+        owner: "default",
       },
       currentLink: {},
       currentIndex: 0,
