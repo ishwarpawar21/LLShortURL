@@ -58,12 +58,12 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. -->
             </div>
           </div>
           <footer class="card-footer">
-            <a
+            <!-- <a
               v-on:click="toggleModal('edit', link, i)"
               href="#"
               class="card-footer-item"
               >Edit</a
-            >
+            > -->
             <a
               v-on:click="deleteLink(link.id, i)"
               href="#"
@@ -97,7 +97,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. -->
           ></button>
         </header>
         <section class="modal-card-body">
-          <div class="field">
+          <!-- <div class="field">
             <div class="control">
               <input
                 class="input"
@@ -108,7 +108,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. -->
                 :disabled="!modalTypeCreate"
               />
             </div>
-          </div>
+          </div> -->
           <div class="field">
             <div class="control">
               <input
@@ -172,14 +172,14 @@ export default {
   },
   methods: {
     toggleModal: function (type, link = null, ind = 0) {
-      this.model.id = this.model.url = ""; // hacky reset
+      //this.model.id = this.model.url = ""; // hacky reset
       this.modalTypeCreate = type === "create";
       this.modalIsActive = !this.modalIsActive;
 
       if (type === "edit") {
         this.currentLink = link;
         this.currentIndex = ind;
-        this.model.id = link.id;
+        //this.model.id = link.id;
         this.model.url = link.url;
       }
     },
