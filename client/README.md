@@ -45,7 +45,8 @@ Update and save the `.env` file. when you are done it should look "something" li
 VUE_APP_NAME=shortener
 VUE_APP_API_ROOT=https://fd7c8be3rg.execute-api.us-west-2.amazonaws.com/Prod
 VUE_APP_AUTH_DOMAIN=https://shortener.auth.us-west-2.amazoncognito.com
-VUE_APP_CLIENT_ID=432p7npp8tf7a8pnb0hg5cbegl
+VUE_APP_CLIENT_ID=
+432p7npp8tf7a8pnb0hg5cbegl
 ```
 
 ### 2. Install NPM dependencies
