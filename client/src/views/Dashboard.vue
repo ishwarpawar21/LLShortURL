@@ -172,7 +172,7 @@ export default {
   },
   methods: {
     toggleModal: function (type, link = null, ind = 0) {
-      this.model.id = this.model.url = ""; // hacky reset
+      this.model.id = this.model.url = "default"; // hacky reset
       this.modalTypeCreate = type === "create";
       this.modalIsActive = !this.modalIsActive;
 
