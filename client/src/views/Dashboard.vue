@@ -58,12 +58,12 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. -->
             </div>
           </div>
           <footer class="card-footer">
-            <!-- <a
+            <a
               v-on:click="toggleModal('edit', link, i)"
               href="#"
               class="card-footer-item"
               >Edit</a
-            > -->
+            >
             <a
               v-on:click="deleteLink(link.id, i)"
               href="#"
@@ -97,7 +97,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. -->
           ></button>
         </header>
         <section class="modal-card-body">
-          <div class="field">
+        <!-- <div class="field">
             <div class="control">
               <input
                 class="input"
@@ -108,7 +108,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. -->
                 :disabled="!modalTypeCreate"
               />
             </div>
-          </div>
+          </div> -->
           <div class="field">
             <div class="control">
               <input
@@ -154,11 +154,9 @@ export default {
       apiUrl: process.env.VUE_APP_API_ROOT,
       modalIsActive: false,
       model: {
-        id: "admin",
-        url: "https://www.default.io",
-        owner: "ishwar@leali.io",
+        id: "default",
+        url: "https://www.leali.io",
       },
-      
       currentLink: {},
       currentIndex: 0,
       modalTypeCreate: true,
@@ -172,7 +170,7 @@ export default {
   },
   methods: {
     toggleModal: function (type, link = null, ind = 0) {
-      this.model.id = "default"
+      this.model.id = "default";
       this.model.url = ""; // hacky reset
       this.modalTypeCreate = type === "create";
       this.modalIsActive = !this.modalIsActive;
@@ -180,7 +178,7 @@ export default {
       if (type === "edit") {
         this.currentLink = link;
         this.currentIndex = ind;
-        this.model.id = "default";
+        this.model.id = link.id;
         this.model.url = link.url;
       }
     },
